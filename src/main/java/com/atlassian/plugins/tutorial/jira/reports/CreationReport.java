@@ -110,7 +110,7 @@ public class CreationReport extends AbstractReport {
             log.error("Exception while parsing endDate");
         }
 
-        interval = ParameterUtils.getLongParam(params, "interval");
+        interval = new Long(1);
         projectId = ParameterUtils.getLongParam(params, "selectedProjectId");
         if (interval == null || interval <= 0) {
             action.addError("interval", action.getText("report.issuecreation.interval.invalid"));
